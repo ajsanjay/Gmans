@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GmansLogin: View {
     
+    @StateObject var viewModel = LoginViewModel()
+    
     var body: some View {
         ZStack {
             GmansBGView()
@@ -23,12 +25,15 @@ struct GmansLogin: View {
                     GmanButton(buttonTitle: "Sign In With Apple")
                 }
                 Button(action: {
-                    
+                    viewModel.isEnterUser = true
                 }) {
                     GmanButton(buttonTitle: "Enter User")
                 }
             }
         }
+        .fullScreenCover(isPresented: $viewModel.isEnterUser, content: {
+            DashBoard(isDisplayingDetail: $viewModel.isEnterUser)
+        })
     }
     
 }

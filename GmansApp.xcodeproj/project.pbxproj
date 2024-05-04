@@ -17,6 +17,9 @@
 		8D2787B62BE6035900F4EFE9 /* GmanHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787B52BE6035900F4EFE9 /* GmanHeading.swift */; };
 		8D2787B82BE6047E00F4EFE9 /* GmanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787B72BE6047E00F4EFE9 /* GmanButton.swift */; };
 		8DF2A6092BE61B87007032ED /* GmanDp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6082BE61B87007032ED /* GmanDp.swift */; };
+		8DF2A60C2BE61F36007032ED /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A60B2BE61F36007032ED /* DashBoard.swift */; };
+		8DF2A6172BE63064007032ED /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6162BE63064007032ED /* LoginViewModel.swift */; };
+		8DF2A61B2BE6315A007032ED /* GmansNavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		8D2787B52BE6035900F4EFE9 /* GmanHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanHeading.swift; sourceTree = "<group>"; };
 		8D2787B72BE6047E00F4EFE9 /* GmanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanButton.swift; sourceTree = "<group>"; };
 		8DF2A6082BE61B87007032ED /* GmanDp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanDp.swift; sourceTree = "<group>"; };
+		8DF2A60B2BE61F36007032ED /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
+		8DF2A6162BE63064007032ED /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansNavButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 				8D27879C2BE5435200F4EFE9 /* GmansAppApp.swift */,
 				8D2787AA2BE5438200F4EFE9 /* GmansSplashScreen.swift */,
 				8D2787AF2BE5FD4600F4EFE9 /* LoginPage */,
+				8DF2A60A2BE61F26007032ED /* Dashboard */,
 				8D2787A02BE5435300F4EFE9 /* Assets.xcassets */,
 				8D2787A22BE5435300F4EFE9 /* Preview Content */,
 			);
@@ -95,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				8D2787B02BE5FD5B00F4EFE9 /* GmansLogin.swift */,
+				8DF2A6162BE63064007032ED /* LoginViewModel.swift */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";
@@ -105,8 +113,17 @@
 				8D2787B52BE6035900F4EFE9 /* GmanHeading.swift */,
 				8D2787B72BE6047E00F4EFE9 /* GmanButton.swift */,
 				8DF2A6082BE61B87007032ED /* GmanDp.swift */,
+				8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */,
 			);
 			path = UIStyles;
+			sourceTree = "<group>";
+		};
+		8DF2A60A2BE61F26007032ED /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2A60B2BE61F36007032ED /* DashBoard.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,8 +201,11 @@
 				8D27879D2BE5435200F4EFE9 /* GmansAppApp.swift in Sources */,
 				8D2787AE2BE543A100F4EFE9 /* GmansSplashBG.swift in Sources */,
 				8D2787B82BE6047E00F4EFE9 /* GmanButton.swift in Sources */,
+				8DF2A61B2BE6315A007032ED /* GmansNavButton.swift in Sources */,
 				8D2787B12BE5FD5B00F4EFE9 /* GmansLogin.swift in Sources */,
+				8DF2A60C2BE61F36007032ED /* DashBoard.swift in Sources */,
 				8DF2A6092BE61B87007032ED /* GmanDp.swift in Sources */,
+				8DF2A6172BE63064007032ED /* LoginViewModel.swift in Sources */,
 				8D2787AB2BE5438200F4EFE9 /* GmansSplashScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

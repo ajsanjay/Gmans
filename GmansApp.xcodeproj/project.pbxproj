@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D27879D2BE5435200F4EFE9 /* GmansAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D27879C2BE5435200F4EFE9 /* GmansAppApp.swift */; };
+		8D2787A12BE5435300F4EFE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2787A02BE5435300F4EFE9 /* Assets.xcassets */; };
+		8D2787A42BE5435300F4EFE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2787A32BE5435300F4EFE9 /* Preview Assets.xcassets */; };
+		8D2787AB2BE5438200F4EFE9 /* GmansSplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787AA2BE5438200F4EFE9 /* GmansSplashScreen.swift */; };
+		8D2787AE2BE543A100F4EFE9 /* GmansSplashBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787AD2BE543A100F4EFE9 /* GmansSplashBG.swift */; };
+		8D2787B12BE5FD5B00F4EFE9 /* GmansLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787B02BE5FD5B00F4EFE9 /* GmansLogin.swift */; };
+		8D2787B32BE602B600F4EFE9 /* GmansBGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787B22BE602B600F4EFE9 /* GmansBGView.swift */; };
+		8D2787B62BE6035900F4EFE9 /* GmanHeading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787B52BE6035900F4EFE9 /* GmanHeading.swift */; };
+		8D2787B82BE6047E00F4EFE9 /* GmanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2787B72BE6047E00F4EFE9 /* GmanButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D2787992BE5435200F4EFE9 /* GmansApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GmansApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D27879C2BE5435200F4EFE9 /* GmansAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansAppApp.swift; sourceTree = "<group>"; };
+		8D2787A02BE5435300F4EFE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D2787A32BE5435300F4EFE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8D2787AA2BE5438200F4EFE9 /* GmansSplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansSplashScreen.swift; sourceTree = "<group>"; };
+		8D2787AD2BE543A100F4EFE9 /* GmansSplashBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansSplashBG.swift; sourceTree = "<group>"; };
+		8D2787B02BE5FD5B00F4EFE9 /* GmansLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansLogin.swift; sourceTree = "<group>"; };
+		8D2787B22BE602B600F4EFE9 /* GmansBGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansBGView.swift; sourceTree = "<group>"; };
+		8D2787B52BE6035900F4EFE9 /* GmanHeading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanHeading.swift; sourceTree = "<group>"; };
+		8D2787B72BE6047E00F4EFE9 /* GmanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D2787962BE5435200F4EFE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D2787902BE5435200F4EFE9 = {
+			isa = PBXGroup;
+			children = (
+				8D27879B2BE5435200F4EFE9 /* GmansApp */,
+				8D27879A2BE5435200F4EFE9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D27879A2BE5435200F4EFE9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D2787992BE5435200F4EFE9 /* GmansApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D27879B2BE5435200F4EFE9 /* GmansApp */ = {
+			isa = PBXGroup;
+			children = (
+				8D2787B42BE6033200F4EFE9 /* UIStyles */,
+				8D2787AC2BE5438E00F4EFE9 /* Views */,
+				8D27879C2BE5435200F4EFE9 /* GmansAppApp.swift */,
+				8D2787AA2BE5438200F4EFE9 /* GmansSplashScreen.swift */,
+				8D2787AF2BE5FD4600F4EFE9 /* LoginPage */,
+				8D2787A02BE5435300F4EFE9 /* Assets.xcassets */,
+				8D2787A22BE5435300F4EFE9 /* Preview Content */,
+			);
+			path = GmansApp;
+			sourceTree = "<group>";
+		};
+		8D2787A22BE5435300F4EFE9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8D2787A32BE5435300F4EFE9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8D2787AC2BE5438E00F4EFE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D2787AD2BE543A100F4EFE9 /* GmansSplashBG.swift */,
+				8D2787B22BE602B600F4EFE9 /* GmansBGView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8D2787AF2BE5FD4600F4EFE9 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				8D2787B02BE5FD5B00F4EFE9 /* GmansLogin.swift */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		8D2787B42BE6033200F4EFE9 /* UIStyles */ = {
+			isa = PBXGroup;
+			children = (
+				8D2787B52BE6035900F4EFE9 /* GmanHeading.swift */,
+				8D2787B72BE6047E00F4EFE9 /* GmanButton.swift */,
+			);
+			path = UIStyles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D2787982BE5435200F4EFE9 /* GmansApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D2787A72BE5435300F4EFE9 /* Build configuration list for PBXNativeTarget "GmansApp" */;
+			buildPhases = (
+				8D2787952BE5435200F4EFE9 /* Sources */,
+				8D2787962BE5435200F4EFE9 /* Frameworks */,
+				8D2787972BE5435200F4EFE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GmansApp;
+			productName = GmansApp;
+			productReference = 8D2787992BE5435200F4EFE9 /* GmansApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D2787912BE5435200F4EFE9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					8D2787982BE5435200F4EFE9 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 8D2787942BE5435200F4EFE9 /* Build configuration list for PBXProject "GmansApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D2787902BE5435200F4EFE9;
+			productRefGroup = 8D27879A2BE5435200F4EFE9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D2787982BE5435200F4EFE9 /* GmansApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D2787972BE5435200F4EFE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D2787A42BE5435300F4EFE9 /* Preview Assets.xcassets in Resources */,
+				8D2787A12BE5435300F4EFE9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D2787952BE5435200F4EFE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D2787B32BE602B600F4EFE9 /* GmansBGView.swift in Sources */,
+				8D2787B62BE6035900F4EFE9 /* GmanHeading.swift in Sources */,
+				8D27879D2BE5435200F4EFE9 /* GmansAppApp.swift in Sources */,
+				8D2787AE2BE543A100F4EFE9 /* GmansSplashBG.swift in Sources */,
+				8D2787B82BE6047E00F4EFE9 /* GmanButton.swift in Sources */,
+				8D2787B12BE5FD5B00F4EFE9 /* GmansLogin.swift in Sources */,
+				8D2787AB2BE5438200F4EFE9 /* GmansSplashScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8D2787A52BE5435300F4EFE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D2787A62BE5435300F4EFE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D2787A82BE5435300F4EFE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GmansApp/Preview Content\"";
+				DEVELOPMENT_TEAM = R6G7L23BRG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AJS.GmansApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D2787A92BE5435300F4EFE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GmansApp/Preview Content\"";
+				DEVELOPMENT_TEAM = R6G7L23BRG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AJS.GmansApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D2787942BE5435200F4EFE9 /* Build configuration list for PBXProject "GmansApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D2787A52BE5435300F4EFE9 /* Debug */,
+				8D2787A62BE5435300F4EFE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D2787A72BE5435300F4EFE9 /* Build configuration list for PBXNativeTarget "GmansApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D2787A82BE5435300F4EFE9 /* Debug */,
+				8D2787A92BE5435300F4EFE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D2787912BE5435200F4EFE9 /* Project object */;
+}

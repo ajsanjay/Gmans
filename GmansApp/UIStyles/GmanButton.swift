@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct GmanButton: View {
+    
+    let buttonTitle: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(buttonTitle)
+            .font(.title2)
+            .fontWeight(.medium)
+            .foregroundColor(.buttonTitle)
+            .frame(width: 290, height: 60)
+            .background(.buttonBg.gradient)
+            .cornerRadius(30)
     }
+    
 }
 
 #Preview {
-    GmanButton()
+    GmanButton(buttonTitle: "Click Me")
 }

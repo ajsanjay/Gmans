@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct GmansLogin: View {
     
@@ -19,11 +20,21 @@ struct GmansLogin: View {
                     .padding(.bottom, 40)
                 GmanDp(systemName: "person.circle")
                     .padding(.bottom, 30)
-                Button(action: {
-                    
-                }) {
-                    GmanButton(buttonTitle: "Sign In With Apple")
-                }
+                SignInWithAppleButton(
+                            onRequest: { request in
+                                request.requestedScopes = [.fullName, .email]
+                            },
+                            onCompletion: { result in
+                                switch result {
+                                case .success(let authResults):
+                                    handleAuthorizationResults(authResults)
+                                case .failure(let error):
+                                    print("Sign in with Apple failed: \(error)")
+                                }
+                            }
+                        )
+                        .frame(width: 290, height: 60)
+                        .cornerRadius(30)
                 Button(action: {
                     viewModel.isEnterUser = true
                 }) {
@@ -34,6 +45,13 @@ struct GmansLogin: View {
         .fullScreenCover(isPresented: $viewModel.isEnterUser, content: {
             DashBoard(isDisplayingDetail: $viewModel.isEnterUser)
         })
+    }
+    
+    func handleAuthorizationResults(_ authResults: ASAuthorization) {
+        if let appleIDCredential = authResults.credential as? ASAuthorizationAppleIDCredential {
+            let userIdentifier = appleIDCredential.user
+            // You can also access user's full name, email, etc.
+        }
     }
     
 }

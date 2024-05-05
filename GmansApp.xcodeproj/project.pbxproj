@@ -20,6 +20,11 @@
 		8DF2A60C2BE61F36007032ED /* DashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A60B2BE61F36007032ED /* DashBoard.swift */; };
 		8DF2A6172BE63064007032ED /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6162BE63064007032ED /* LoginViewModel.swift */; };
 		8DF2A61B2BE6315A007032ED /* GmansNavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */; };
+		8DF2A6272BE67BCF007032ED /* ActualHeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6262BE67BCF007032ED /* ActualHeartRate.swift */; };
+		8DF2A6292BE67C81007032ED /* healthKitVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6282BE67C81007032ED /* healthKitVM.swift */; };
+		8DF2A62B2BE67FDC007032ED /* GmanSubTitl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A62A2BE67FDC007032ED /* GmanSubTitl.swift */; };
+		8DF2A62D2BE68066007032ED /* HardCodeHeathData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A62C2BE68066007032ED /* HardCodeHeathData.swift */; };
+		8DF2A6302BE6815C007032ED /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A62F2BE6815C007032ED /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,12 @@
 		8DF2A60B2BE61F36007032ED /* DashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoard.swift; sourceTree = "<group>"; };
 		8DF2A6162BE63064007032ED /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansNavButton.swift; sourceTree = "<group>"; };
+		8DF2A6262BE67BCF007032ED /* ActualHeartRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualHeartRate.swift; sourceTree = "<group>"; };
+		8DF2A6282BE67C81007032ED /* healthKitVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKitVM.swift; sourceTree = "<group>"; };
+		8DF2A62A2BE67FDC007032ED /* GmanSubTitl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanSubTitl.swift; sourceTree = "<group>"; };
+		8DF2A62C2BE68066007032ED /* HardCodeHeathData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodeHeathData.swift; sourceTree = "<group>"; };
+		8DF2A62F2BE6815C007032ED /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		8DF2A6312BE68327007032ED /* GmansApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GmansApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +80,8 @@
 		8D27879B2BE5435200F4EFE9 /* GmansApp */ = {
 			isa = PBXGroup;
 			children = (
+				8DF2A6312BE68327007032ED /* GmansApp.entitlements */,
+				8DF2A62E2BE68150007032ED /* MockData */,
 				8D2787B42BE6033200F4EFE9 /* UIStyles */,
 				8D2787AC2BE5438E00F4EFE9 /* Views */,
 				8D27879C2BE5435200F4EFE9 /* GmansAppApp.swift */,
@@ -114,6 +127,7 @@
 				8D2787B72BE6047E00F4EFE9 /* GmanButton.swift */,
 				8DF2A6082BE61B87007032ED /* GmanDp.swift */,
 				8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */,
+				8DF2A62A2BE67FDC007032ED /* GmanSubTitl.swift */,
 			);
 			path = UIStyles;
 			sourceTree = "<group>";
@@ -122,8 +136,19 @@
 			isa = PBXGroup;
 			children = (
 				8DF2A60B2BE61F36007032ED /* DashBoard.swift */,
+				8DF2A6282BE67C81007032ED /* healthKitVM.swift */,
+				8DF2A6262BE67BCF007032ED /* ActualHeartRate.swift */,
+				8DF2A62C2BE68066007032ED /* HardCodeHeathData.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		8DF2A62E2BE68150007032ED /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2A62F2BE6815C007032ED /* MockData.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +229,13 @@
 				8DF2A61B2BE6315A007032ED /* GmansNavButton.swift in Sources */,
 				8D2787B12BE5FD5B00F4EFE9 /* GmansLogin.swift in Sources */,
 				8DF2A60C2BE61F36007032ED /* DashBoard.swift in Sources */,
+				8DF2A62B2BE67FDC007032ED /* GmanSubTitl.swift in Sources */,
+				8DF2A6292BE67C81007032ED /* healthKitVM.swift in Sources */,
 				8DF2A6092BE61B87007032ED /* GmanDp.swift in Sources */,
 				8DF2A6172BE63064007032ED /* LoginViewModel.swift in Sources */,
+				8DF2A62D2BE68066007032ED /* HardCodeHeathData.swift in Sources */,
+				8DF2A6302BE6815C007032ED /* MockData.swift in Sources */,
+				8DF2A6272BE67BCF007032ED /* ActualHeartRate.swift in Sources */,
 				8D2787AB2BE5438200F4EFE9 /* GmansSplashScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,12 +367,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GmansApp/GmansApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GmansApp/Preview Content\"";
 				DEVELOPMENT_TEAM = R6G7L23BRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "GmansApp need to acess health record to monitor the health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -367,12 +399,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GmansApp/GmansApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GmansApp/Preview Content\"";
 				DEVELOPMENT_TEAM = R6G7L23BRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "GmansApp need to acess health record to monitor the health data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

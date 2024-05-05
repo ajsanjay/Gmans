@@ -51,6 +51,7 @@ struct GmansLogin: View {
         if let appleIDCredential = authResults.credential as? ASAuthorizationAppleIDCredential {
             let userIdentifier = appleIDCredential.user
             // You can also access user's full name, email, etc.
+            print("User identifier \(userIdentifier)")
         }
     }
     

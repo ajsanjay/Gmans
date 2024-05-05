@@ -20,7 +20,7 @@ struct ActualHeartRate: View {
                 GmanHeading(heading: "Health Data")
                     .padding()
                 Spacer()
-                if healthKitManager.isAuthorized {
+                if healthKitManager.isHeartRateAuthorized {
                     List(heartRateData, id: \.uuid) { sample in
                         Text("\(sample.quantity.doubleValue(for: HKUnit.count().unitDivided(by: .minute()))) bpm")
                     }

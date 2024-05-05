@@ -20,14 +20,14 @@ struct HardCodeHeathData: View {
                 GmanHeading(heading: "Hardcode Data")
                     .padding()
                 Spacer()
-                if healthKitManager.isAuthorized {
+                if healthKitManager.isHeartRateAuthorized {
                     List(heartRateData, id: \.uuid) { sample in
                         Text("\(sample.quantity.doubleValue(for: HKUnit.count().unitDivided(by: .minute()))) bpm")
                     }
                     .listStyle(PlainListStyle())
                     .background(Color.clear)
                     .onAppear {
-                        addDummyData()
+                        addHeartDummyData()
                     }
                 } else {
                     GmanSubTitl(subTitl: "Please grant access to HealthKit to see data.")
@@ -40,7 +40,7 @@ struct HardCodeHeathData: View {
         }
     }
     
-    func addDummyData() {
+    func addHeartDummyData() {
         DispatchQueue.global().async {
             for data in MockData.heartRate {
                 let quantity = HKQuantity(unit: HKUnit.count().unitDivided(by: .minute()), doubleValue: data.0)

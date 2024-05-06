@@ -25,6 +25,10 @@
 		8DF2A62B2BE67FDC007032ED /* GmanSubTitl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A62A2BE67FDC007032ED /* GmanSubTitl.swift */; };
 		8DF2A62D2BE68066007032ED /* HardCodeHeathData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A62C2BE68066007032ED /* HardCodeHeathData.swift */; };
 		8DF2A6302BE6815C007032ED /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A62F2BE6815C007032ED /* MockData.swift */; };
+		8DF2A63E2BE77CC9007032ED /* HeartRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A63D2BE77CC9007032ED /* HeartRate.swift */; };
+		8DF2A6402BE77CE5007032ED /* WalKingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A63F2BE77CE5007032ED /* WalKingDistance.swift */; };
+		8DF2A6422BE77CF1007032ED /* StepsCovered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6412BE77CF1007032ED /* StepsCovered.swift */; };
+		8DF2A6452BE8ADCA007032ED /* GmansCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6442BE8ADCA007032ED /* GmansCalender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		8DF2A62C2BE68066007032ED /* HardCodeHeathData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodeHeathData.swift; sourceTree = "<group>"; };
 		8DF2A62F2BE6815C007032ED /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		8DF2A6312BE68327007032ED /* GmansApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GmansApp.entitlements; sourceTree = "<group>"; };
+		8DF2A63D2BE77CC9007032ED /* HeartRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRate.swift; sourceTree = "<group>"; };
+		8DF2A63F2BE77CE5007032ED /* WalKingDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalKingDistance.swift; sourceTree = "<group>"; };
+		8DF2A6412BE77CF1007032ED /* StepsCovered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCovered.swift; sourceTree = "<group>"; };
+		8DF2A6442BE8ADCA007032ED /* GmansCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansCalender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 			children = (
 				8D2787AD2BE543A100F4EFE9 /* GmansSplashBG.swift */,
 				8D2787B22BE602B600F4EFE9 /* GmansBGView.swift */,
+				8DF2A6442BE8ADCA007032ED /* GmansCalender.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +148,7 @@
 				8DF2A6282BE67C81007032ED /* healthKitVM.swift */,
 				8DF2A6262BE67BCF007032ED /* ActualHeartRate.swift */,
 				8DF2A62C2BE68066007032ED /* HardCodeHeathData.swift */,
+				8DF2A63C2BE77CAF007032ED /* HealthCards */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -149,6 +159,16 @@
 				8DF2A62F2BE6815C007032ED /* MockData.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		8DF2A63C2BE77CAF007032ED /* HealthCards */ = {
+			isa = PBXGroup;
+			children = (
+				8DF2A63D2BE77CC9007032ED /* HeartRate.swift */,
+				8DF2A63F2BE77CE5007032ED /* WalKingDistance.swift */,
+				8DF2A6412BE77CF1007032ED /* StepsCovered.swift */,
+			);
+			path = HealthCards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,12 +251,16 @@
 				8DF2A60C2BE61F36007032ED /* DashBoard.swift in Sources */,
 				8DF2A62B2BE67FDC007032ED /* GmanSubTitl.swift in Sources */,
 				8DF2A6292BE67C81007032ED /* healthKitVM.swift in Sources */,
+				8DF2A6452BE8ADCA007032ED /* GmansCalender.swift in Sources */,
 				8DF2A6092BE61B87007032ED /* GmanDp.swift in Sources */,
 				8DF2A6172BE63064007032ED /* LoginViewModel.swift in Sources */,
 				8DF2A62D2BE68066007032ED /* HardCodeHeathData.swift in Sources */,
 				8DF2A6302BE6815C007032ED /* MockData.swift in Sources */,
+				8DF2A6402BE77CE5007032ED /* WalKingDistance.swift in Sources */,
 				8DF2A6272BE67BCF007032ED /* ActualHeartRate.swift in Sources */,
+				8DF2A63E2BE77CC9007032ED /* HeartRate.swift in Sources */,
 				8D2787AB2BE5438200F4EFE9 /* GmansSplashScreen.swift in Sources */,
+				8DF2A6422BE77CF1007032ED /* StepsCovered.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

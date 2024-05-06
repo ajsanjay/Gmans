@@ -15,7 +15,7 @@ struct GmansSplashBG: View {
         GmansBGView()
             .overlay(
                 HeartView()
-                    .frame(width: 75, height: 75)
+                    .frame(width: 20, height: 20)
                     .scaleEffect(animationAmount)
                     .animation(
                         .spring(response: 0.2, dampingFraction: 0.3, blendDuration: 0.8)
@@ -33,19 +33,19 @@ struct HeartView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .frame(width: 75, height: 75, alignment: .center)
+                .frame(width: 20, height: 20, alignment: .center)
                 .foregroundColor(.red)
                 .cornerRadius(5)
             
             Circle()
-                .frame(width: 75, height: 75, alignment: .center)
+                .frame(width: 20, height: 20, alignment: .center)
                 .foregroundColor(.red)
-                .padding(.top, -75)
+                .padding(.top, -20)
             
             Circle()
-                .frame(width: 75, height: 75, alignment: .center)
+                .frame(width: 20, height: 20, alignment: .center)
                 .foregroundColor(.red)
-                .padding(.trailing, -75)
+                .padding(.trailing, -20)
         }
         .rotationEffect(Angle(degrees: -45))
     }

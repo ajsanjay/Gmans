@@ -13,30 +13,36 @@ struct HardCodeHeathData: View {
     @StateObject var healthKitManager = HealthKitManager()
     @State private var heartRateData: [HKQuantitySample] = []
     
+    @State private var currentIndex = 0
+        
     var body: some View {
         ZStack {
             GmansBGView()
             VStack {
-                GmanHeading(heading: "Hardcode Data")
-                    .padding()
-                Spacer()
                 if healthKitManager.isHeartRateAuthorized {
-                    List(heartRateData, id: \.uuid) { sample in
-                        Text("\(sample.quantity.doubleValue(for: HKUnit.count().unitDivided(by: .minute()))) bpm")
+                    TabView(selection: $currentIndex) {
+                        HeartRate(heartRateData: heartRateData)
+                            .tag(0)
+                        WalKingDistance()
+                            .tag(1)
+                        StepsCovered()
+                            .tag(2)
                     }
-                    .listStyle(PlainListStyle())
-                    .background(Color.clear)
-                    .onAppear {
-                        addHeartDummyData()
+                    .onChange(of: currentIndex) { newValue in
+                        print("Selected tab index: \(newValue)")
                     }
+                    .tabViewStyle(.page)
+                    .indexViewStyle(.page(backgroundDisplayMode: .interactive))
                 } else {
                     GmanSubTitl(subTitl: "Please grant access to HealthKit to see data.")
                         .padding()
                 }
             }
         }
+        .edgesIgnoringSafeArea(.all)
         .onAppear() {
             healthKitManager.requestAuthorization()
+            addHeartDummyData()
         }
     }
     

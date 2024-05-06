@@ -22,6 +22,7 @@ struct GmansCalender: View {
                     displayedMonth = Calendar.current.date(byAdding: .month, value: -1, to: displayedMonth)!
                 }) {
                     Image(systemName: "chevron.left")
+                        .foregroundColor(.black)
                 }
                 .padding(.horizontal)
 
@@ -32,6 +33,7 @@ struct GmansCalender: View {
                     displayedMonth = Calendar.current.date(byAdding: .month, value: 1, to: displayedMonth)!
                 }) {
                     Image(systemName: "chevron.right")
+                        .foregroundColor(.black)
                 }
                 .padding(.horizontal)
             }

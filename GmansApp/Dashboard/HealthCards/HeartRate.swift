@@ -11,6 +11,7 @@ import HealthKit
 struct HeartRate: View {
     
     @State private var animationAmount: CGFloat = 1
+    @State private var displayCalender: Bool = false
     
     var heartRateData: [HKQuantitySample] = []
     
@@ -30,19 +31,29 @@ struct HeartRate: View {
                         .padding(.leading, -130)
                     GmanHeading(heading:"Heart Rate")
                 }
-                ScrollView {
-                    LazyVStack {
-                        ForEach(0..<heartRateData.count, id: \.self) { index in
-                            let sample = heartRateData[index]
-                            Text("\(index): \(sample.quantity.doubleValue(for: HKUnit.count().unitDivided(by: .minute()))) bpm")
-                                .padding()
-                                .background(Color.blue)
-                                .cornerRadius(10)
-                                .foregroundColor(.white)
+                Button(action: {
+                    displayCalender.toggle()
+                }) {
+                    GmanButton(buttonTitle: "Select Dates")
+                }
+                .padding()
+                if displayCalender {
+                    GmansCalender()
+                    Spacer()
+                } else {
+                    ScrollView {
+                        LazyVStack {
+                            ForEach(0..<heartRateData.count, id: \.self) { index in
+                                let sample = heartRateData[index]
+                                Text("\(index): \(sample.quantity.doubleValue(for: HKUnit.count().unitDivided(by: .minute()))) bpm")
+                                    .padding()
+                                    .background(Color.blue)
+                                    .cornerRadius(10)
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
                 }
-                
             }
         }
         .onAppear() {

@@ -11,6 +11,7 @@ struct StepsCovered: View {
     
     @State private var isWalking = false
     @State private var timer: Timer? = nil
+    @State private var displayCalender: Bool = false
     
     var body: some View {
         ZStack {
@@ -23,6 +24,17 @@ struct StepsCovered: View {
                         .foregroundColor(.red)
                         .padding(.leading, -160)
                     GmanHeading(heading:"Steps Covered")
+                }
+                Button(action: {
+                    displayCalender.toggle()
+                }) {
+                    GmanButton(buttonTitle: "Select Dates")
+                }
+                .padding()
+                if displayCalender {
+                    GmansCalender()
+                } else {
+                    
                 }
                 Spacer()
             }

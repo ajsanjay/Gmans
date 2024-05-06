@@ -29,6 +29,7 @@
 		8DF2A6402BE77CE5007032ED /* WalKingDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A63F2BE77CE5007032ED /* WalKingDistance.swift */; };
 		8DF2A6422BE77CF1007032ED /* StepsCovered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6412BE77CF1007032ED /* StepsCovered.swift */; };
 		8DF2A6452BE8ADCA007032ED /* GmansCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6442BE8ADCA007032ED /* GmansCalender.swift */; };
+		8DF2A6472BE8C14B007032ED /* GmansBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6462BE8C14B007032ED /* GmansBarChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		8DF2A63F2BE77CE5007032ED /* WalKingDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalKingDistance.swift; sourceTree = "<group>"; };
 		8DF2A6412BE77CF1007032ED /* StepsCovered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsCovered.swift; sourceTree = "<group>"; };
 		8DF2A6442BE8ADCA007032ED /* GmansCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansCalender.swift; sourceTree = "<group>"; };
+		8DF2A6462BE8C14B007032ED /* GmansBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansBarChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				8D2787AD2BE543A100F4EFE9 /* GmansSplashBG.swift */,
 				8D2787B22BE602B600F4EFE9 /* GmansBGView.swift */,
 				8DF2A6442BE8ADCA007032ED /* GmansCalender.swift */,
+				8DF2A6462BE8C14B007032ED /* GmansBarChart.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				8DF2A6172BE63064007032ED /* LoginViewModel.swift in Sources */,
 				8DF2A62D2BE68066007032ED /* HardCodeHeathData.swift in Sources */,
 				8DF2A6302BE6815C007032ED /* MockData.swift in Sources */,
+				8DF2A6472BE8C14B007032ED /* GmansBarChart.swift in Sources */,
 				8DF2A6402BE77CE5007032ED /* WalKingDistance.swift in Sources */,
 				8DF2A6272BE67BCF007032ED /* ActualHeartRate.swift in Sources */,
 				8DF2A63E2BE77CC9007032ED /* HeartRate.swift in Sources */,

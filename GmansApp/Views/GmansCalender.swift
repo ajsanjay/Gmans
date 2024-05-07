@@ -10,6 +10,7 @@ import SwiftUI
 struct GmansCalender: View {
     
     @State private var selectedDates: Set<DateComponents> = []
+    @Binding var hideCalender: Bool
 //    @State private var displayedMonth: Date = Date()
 //    @State private var selectedDate: Date = Date()
 
@@ -27,6 +28,13 @@ struct GmansCalender: View {
             MultiDatePicker("Select Days", selection: $selectedDates)
                 .padding()
                 .frame(height: 400)
+            if selectedDates.count > 0 {
+                Button(action: {
+                    hideCalender.toggle()
+                }) {
+                    GmanButton(buttonTitle: "Done")
+                }
+            }
 
           /*  HStack {
                 Button(action: {
@@ -117,7 +125,7 @@ struct GmansCalender: View {
     }()*/
 }
 
-struct DayCell: View {
+/*struct DayCell: View {
     let date: Date
     let isSelected: Bool
     let action: () -> Void
@@ -158,6 +166,8 @@ extension Date {
     }
 }
 
+*/
+
 #Preview {
-    GmansCalender()
+    GmansCalender(hideCalender: .constant(false))
 }

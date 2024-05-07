@@ -32,6 +32,7 @@
 		8DF2A6472BE8C14B007032ED /* GmansBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6462BE8C14B007032ED /* GmansBarChart.swift */; };
 		8DF2A64B2BE8CDEB007032ED /* GmansPiChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A64A2BE8CDEB007032ED /* GmansPiChart.swift */; };
 		8DF2A64D2BE9C3DB007032ED /* GmanLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A64C2BE9C3DB007032ED /* GmanLineChart.swift */; };
+		8DF2A64F2BE9C99F007032ED /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A64E2BE9C99F007032ED /* HeartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		8DF2A6462BE8C14B007032ED /* GmansBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansBarChart.swift; sourceTree = "<group>"; };
 		8DF2A64A2BE8CDEB007032ED /* GmansPiChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansPiChart.swift; sourceTree = "<group>"; };
 		8DF2A64C2BE9C3DB007032ED /* GmanLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanLineChart.swift; sourceTree = "<group>"; };
+		8DF2A64E2BE9C99F007032ED /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				8DF2A6462BE8C14B007032ED /* GmansBarChart.swift */,
 				8DF2A64A2BE8CDEB007032ED /* GmansPiChart.swift */,
 				8DF2A64C2BE9C3DB007032ED /* GmanLineChart.swift */,
+				8DF2A64E2BE9C99F007032ED /* HeartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2787B32BE602B600F4EFE9 /* GmansBGView.swift in Sources */,
+				8DF2A64F2BE9C99F007032ED /* HeartView.swift in Sources */,
 				8D2787B62BE6035900F4EFE9 /* GmanHeading.swift in Sources */,
 				8D27879D2BE5435200F4EFE9 /* GmansAppApp.swift in Sources */,
 				8D2787AE2BE543A100F4EFE9 /* GmansSplashBG.swift in Sources */,

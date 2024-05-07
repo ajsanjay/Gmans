@@ -32,7 +32,7 @@ struct WalKingDistance: View {
                 }
                 .padding()
                 if displayCalender {
-                    GmansCalender()
+                    GmansCalender(hideCalender: $displayCalender)
                 } else {
                     
                 }

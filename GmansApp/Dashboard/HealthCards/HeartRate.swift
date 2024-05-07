@@ -38,7 +38,7 @@ struct HeartRate: View {
                 }
                 .padding()
                 if displayCalender {
-                    GmansCalender()
+                    GmansCalender(hideCalender: $displayCalender)
                     Spacer()
                 } else {
                     ScrollView {

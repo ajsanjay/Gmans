@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GmansBGView: View {
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [Color.blue, Color.purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        LinearGradient(gradient: Gradient(colors: [.bgTop, .bgBottom]), startPoint: .topLeading, endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(.all)
     }
 }

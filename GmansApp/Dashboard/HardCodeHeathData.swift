@@ -28,9 +28,6 @@ struct HardCodeHeathData: View {
                         StepsCovered()
                             .tag(2)
                     }
-                    .onChange(of: currentIndex) { newValue in
-                        print("Selected tab index: \(newValue)")
-                    }
                     .tabViewStyle(.page)
                     .indexViewStyle(.page(backgroundDisplayMode: .interactive))
                 } else {

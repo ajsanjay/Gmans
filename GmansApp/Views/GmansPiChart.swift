@@ -16,20 +16,10 @@ struct PiChartDataPoint {
 
 struct GmansPiChart: View {
     
-    @State private var animationAmount: CGFloat = 1
     @State var chartData: [PiChartDataPoint]
     
     var body: some View {
         ZStack {
-            HeartView()
-                .frame(width: 40, height: 40)
-                .scaleEffect(animationAmount)
-                .animation(
-                    .spring(response: 0.2, dampingFraction: 0.3, blendDuration: 0.8)
-                    .delay(0.2)
-                    .repeatForever(autoreverses: true),
-                    value: animationAmount
-                )
             Chart(chartData, id: \.rate) { dataItem in
                 SectorMark(
                     angle: .value("T", dataItem.animate ? dataItem.rate : 0),
@@ -42,11 +32,19 @@ struct GmansPiChart: View {
             .padding()
         }
         .onAppear() {
-            animationAmount = 1.2
             for (index, _) in chartData.enumerated() {
                 DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.5) {
                     withAnimation(.easeInOut(duration: 0.8)) {
                         chartData[index].animate = true
+                    }
+                }
+            }
+        }
+        .onDisappear() {
+            for (index, _) in chartData.enumerated() {
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.5) {
+                    withAnimation(.easeInOut(duration: 0.8)) {
+                        chartData[index].animate = false
                     }
                 }
             }

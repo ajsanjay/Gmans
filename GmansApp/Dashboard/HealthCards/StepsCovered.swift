@@ -25,6 +25,9 @@ struct StepsCovered: View {
                         .padding(.leading, -160)
                     GmanHeading(heading:"Steps Covered")
                 }
+                Spacer()
+                GmansBarChart(chartData: MockData.barChartData)
+                Spacer()
                 Button(action: {
                     displayCalender.toggle()
                 }) {
@@ -33,10 +36,7 @@ struct StepsCovered: View {
                 .padding()
                 if displayCalender {
                     GmansCalender(hideCalender: $displayCalender)
-                } else {
-                    
                 }
-                Spacer()
             }
         }
         .onAppear {

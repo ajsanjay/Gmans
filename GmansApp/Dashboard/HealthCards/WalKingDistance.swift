@@ -25,6 +25,9 @@ struct WalKingDistance: View {
                         .padding(.leading, -180)
                     GmanHeading(heading:"Walking Distance")
                 }
+                Spacer()
+                GmanLineChart(chartData: MockData.barChartData)
+                Spacer()
                 Button(action: {
                     displayCalender.toggle()
                 }) {
@@ -33,10 +36,7 @@ struct WalKingDistance: View {
                 .padding()
                 if displayCalender {
                     GmansCalender(hideCalender: $displayCalender)
-                } else {
-                    
                 }
-                Spacer()
             }
         }
         .onAppear {

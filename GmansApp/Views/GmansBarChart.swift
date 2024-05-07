@@ -49,6 +49,15 @@ struct GmansBarChart: View {
                 }
             }
         }
+        .onDisappear() {
+            for (index, _) in chartData.enumerated() {
+                DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.5) {
+                    withAnimation(.easeInOut(duration: 0.8)) {
+                        chartData[index].animate = false
+                    }
+                }
+            }
+        }
     }
 
 }

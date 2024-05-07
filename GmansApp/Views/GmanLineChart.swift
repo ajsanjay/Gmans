@@ -1,30 +1,31 @@
 //
-//  GmansBarChart.swift
+//  GmanLineChart.swift
 //  GmansApp
 //
-//  Created by Jaya Sabeen on 06/05/24.
+//  Created by Jaya Sabeen on 07/05/24.
 //
 
 import SwiftUI
 import Charts
 
-struct BarChartDataPoint {
-    let date: Date
-    let rate: Double
-    var animate: Bool
-}
-
-struct GmansBarChart: View {
+struct GmanLineChart: View {
     
-    @State private var showAverage: Bool = false
     @State var chartData: [BarChartDataPoint]
-
+    @State private var showAverage: Bool = false
+    
     var body: some View {
         Chart {
             ForEach(0..<chartData.count, id: \.self) { index in
-                BarMark(x: .value("Type", "\(chartData[index].date)"), y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
-                    .opacity(chartData[index].rate > 60 ? 1 : 0.5)
-                    .cornerRadius(15)
+                LineMark(
+                    x: .value("Type", "\(chartData[index].date)"),
+                    y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
+                .foregroundStyle(Color.blue.gradient)
+                    .interpolationMethod(.catmullRom)
+                AreaMark(
+                    x: .value("Type", "\(chartData[index].date)"),
+                    y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
+                .foregroundStyle(Color.blue.opacity(0.1).gradient)
+                    .interpolationMethod(.catmullRom)
                 
                 if showAverage {
                     RuleMark(y: .value("Average", 50))
@@ -50,9 +51,8 @@ struct GmansBarChart: View {
             }
         }
     }
-
 }
 
 #Preview {
-    GmansBarChart(chartData: MockData.barChartData)
+    GmanLineChart(chartData: MockData.barChartData)
 }

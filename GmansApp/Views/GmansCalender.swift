@@ -9,15 +9,26 @@ import SwiftUI
 
 struct GmansCalender: View {
     
-    @State private var selectedDates: Set<Date> = []
-    @State private var displayedMonth: Date = Date()
+    @State private var selectedDates: Set<DateComponents> = []
+//    @State private var displayedMonth: Date = Date()
+//    @State private var selectedDate: Date = Date()
 
     var body: some View {
         VStack {
 //            Text("Selected Dates: \(formattedDates)")
 //                .padding()
+            
+            
+//            DatePicker("Select Days",
+//                       selection: $selectedDate,
+//                       in: Date()...,
+//                       displayedComponents: .date)
+//            .padding()
+            MultiDatePicker("Select Days", selection: $selectedDates)
+                .padding()
+                .frame(height: 400)
 
-            HStack {
+          /*  HStack {
                 Button(action: {
                     displayedMonth = Calendar.current.date(byAdding: .month, value: -1, to: displayedMonth)!
                 }) {
@@ -36,9 +47,9 @@ struct GmansCalender: View {
                         .foregroundColor(.black)
                 }
                 .padding(.horizontal)
-            }
+            } */
 
-            LazyVGrid(columns: Array(repeating: GridItem(), count: 7), spacing: 10) {
+            /*LazyVGrid(columns: Array(repeating: GridItem(), count: 7), spacing: 10) {
                 ForEach(weekdays, id: \.self) { weekday in
                     Text(weekday)
                         .font(.headline)
@@ -54,11 +65,11 @@ struct GmansCalender: View {
                     }
                 }
             }
-            .padding()
+            .padding() */
         }
     }
 
-    private var weekdays: [String] {
+    /*   private var weekdays: [String] {
         let formatter = DateFormatter()
         return formatter.shortWeekdaySymbols.map { $0.uppercased() }
     }
@@ -103,7 +114,7 @@ struct GmansCalender: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM yyyy"
         return formatter
-    }()
+    }()*/
 }
 
 struct DayCell: View {

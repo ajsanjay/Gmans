@@ -26,6 +26,7 @@ struct GmansPiChart: View {
                     innerRadius: .ratio(0.5),
                     angularInset: 1.5
                 )
+                .foregroundStyle(.chartFill)
                 .opacity(dataItem.rate > 50 ? 1 : 0.4)
                 .cornerRadius(10)
             }

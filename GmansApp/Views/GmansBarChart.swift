@@ -23,6 +23,7 @@ struct GmansBarChart: View {
         Chart {
             ForEach(0..<chartData.count, id: \.self) { index in
                 BarMark(x: .value("Type", "\(chartData[index].date)"), y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
+                    .foregroundStyle(.chartFill)
                     .opacity(chartData[index].rate > 60 ? 1 : 0.5)
                     .cornerRadius(15)
                 

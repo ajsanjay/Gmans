@@ -32,20 +32,12 @@ struct DashBoard: View {
                 }
                 .tag(1)
             }
-//            VStack {
-//                HStack {
-//                    Button(action: {
-//                        isDisplayingDetail = false
-//                    }) {
-//                        GmansNavButton(titleName: "arrow.backward")
-//                    }
-//                    Spacer()
-//                }
-//                Spacer()
-            }
+            .tint(.tabbarSelection)
         }
-//    }
-    
+        .onAppear() {
+            UITabBar.appearance().unselectedItemTintColor = .tabbarDeSelect
+        }
+    }
 }
 
 #Preview {

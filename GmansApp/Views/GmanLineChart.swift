@@ -19,12 +19,13 @@ struct GmanLineChart: View {
                 LineMark(
                     x: .value("Type", "\(chartData[index].date)"),
                     y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
-                .foregroundStyle(Color.blue.gradient)
+                .foregroundStyle(.chartLine)
+                .foregroundStyle(.chartFill.gradient)
                     .interpolationMethod(.catmullRom)
                 AreaMark(
                     x: .value("Type", "\(chartData[index].date)"),
                     y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
-                .foregroundStyle(Color.blue.opacity(0.1).gradient)
+                .foregroundStyle(.chartFill.opacity(0.1).gradient)
                     .interpolationMethod(.catmullRom)
                 
                 if showAverage {

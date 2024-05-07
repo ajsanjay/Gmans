@@ -26,14 +26,16 @@ struct GmansCalender: View {
 //                       displayedComponents: .date)
 //            .padding()
             MultiDatePicker("Select Days", selection: $selectedDates)
-                .padding()
-                .frame(height: 400)
+                .padding(.leading, 10)
+                .padding(.trailing, 10)
+                .frame(height: 300)
             if selectedDates.count > 0 {
                 Button(action: {
                     hideCalender.toggle()
                 }) {
                     GmanButton(buttonTitle: "Done")
                 }
+                .padding()
             }
 
           /*  HStack {

@@ -31,13 +31,14 @@ struct StepsCovered: View {
                 Button(action: {
                     displayCalender.toggle()
                 }) {
-                    GmanButton(buttonTitle: "Select Dates")
+                    GmanButton(buttonTitle: displayCalender == true ? "Done" : "Select Dates")
                 }
                 .padding()
                 if displayCalender {
                     GmansCalender(hideCalender: $displayCalender)
                 }
             }
+            .padding(.bottom, 30)
         }
         .onAppear {
             self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in

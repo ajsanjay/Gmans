@@ -12,6 +12,12 @@ struct DashBoard: View {
     @Binding var isDisplayingDetail: Bool
     @State private var selection = 0
     
+    init(isDisplayingDetail: Binding<Bool>) {
+        _isDisplayingDetail = isDisplayingDetail
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)], for: .selected)
+    }
+    
     var body: some View {
         ZStack {
             TabView(selection: $selection) {
@@ -19,20 +25,23 @@ struct DashBoard: View {
                     ActualHeartRate()
                 }
                 .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("First")
+                    Image(systemName: "lock.laptopcomputer")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                    Text("Actual Data")
                 }
                 .tag(0)
                 ZStack {
                     HardCodeHeathData()
                 }
                 .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Second")
+                    Image(systemName: "lock.open.laptopcomputer")
+                    Text("Hard Code")
                 }
                 .tag(1)
             }
-            .tint(.tabbarSelection)
+            .tint(.white)
         }
         .onAppear() {
             UITabBar.appearance().unselectedItemTintColor = .tabbarDeSelect

@@ -36,8 +36,8 @@ struct HardCodeHeathData: View {
                 }
             }
         }
-        .edgesIgnoringSafeArea(.all)
         .onAppear() {
+            currentIndex = 0
             healthKitManager.requestAuthorization()
             addHeartDummyData()
         }

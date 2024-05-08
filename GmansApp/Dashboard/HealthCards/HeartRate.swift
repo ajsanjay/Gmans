@@ -36,13 +36,14 @@ struct HeartRate: View {
                 Button(action: {
                     displayCalender.toggle()
                 }) {
-                    GmanButton(buttonTitle: "Select Dates")
+                    GmanButton(buttonTitle: displayCalender == true ? "Done" : "Select Dates")
                 }
                 .padding()
                 if displayCalender {
                     GmansCalender(hideCalender: $displayCalender)
                 }
             }
+            .padding(.bottom, 30)
         }
         .onAppear() {
             animationAmount = 1.2

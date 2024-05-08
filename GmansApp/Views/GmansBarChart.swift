@@ -18,11 +18,17 @@ struct GmansBarChart: View {
     
     @State private var showAverage: Bool = false
     @State var chartData: [BarChartDataPoint]
+    
+    func formattedDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM/dd"
+        return formatter.string(from: date)
+    }
 
     var body: some View {
         Chart {
             ForEach(0..<chartData.count, id: \.self) { index in
-                BarMark(x: .value("Type", "\(chartData[index].date)"), y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
+                BarMark(x: .value("Type", "\(formattedDate(date: chartData[index].date))"), y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
                     .foregroundStyle(.chartFill)
                     .opacity(chartData[index].rate > 60 ? 1 : 0.5)
                     .cornerRadius(15)
@@ -52,11 +58,7 @@ struct GmansBarChart: View {
         }
         .onDisappear() {
             for (index, _) in chartData.enumerated() {
-                DispatchQueue.main.asyncAfter(deadline: .now() + Double(index) * 0.5) {
-                    withAnimation(.easeInOut(duration: 0.8)) {
-                        chartData[index].animate = false
-                    }
-                }
+                chartData[index].animate = false
             }
         }
     }

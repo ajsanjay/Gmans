@@ -35,9 +35,10 @@ struct GmansBarChart: View {
                 
                 if showAverage {
                     RuleMark(y: .value("Average", 50))
-                        .foregroundStyle(.gray)
+                        .foregroundStyle(.chartFill)
                         .annotation(position: .top, alignment: .bottomLeading) {
                             Text("Average 50")
+                                .foregroundColor(.white)
                         }
                 }
             }
@@ -45,7 +46,11 @@ struct GmansBarChart: View {
         .padding()
         .chartYScale(domain: 0...100)
         .aspectRatio(1, contentMode: .fit)
-        Toggle(showAverage ? "Show Average" : "Hide Average", isOn: $showAverage)
+        Toggle(isOn: $showAverage) {
+            Text(showAverage ? "Show Average" : "Hide Average")
+        }
+        .foregroundColor(.white)
+        .tint(.chartFill)
         .padding()
         .onAppear() {
             for (index, _) in chartData.enumerated() {

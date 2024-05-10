@@ -45,6 +45,8 @@ struct DashBoard: View {
         }
         .onAppear() {
             UITabBar.appearance().unselectedItemTintColor = .tabbarDeSelect
+            UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 10)
+//            UITabBar.appearance().backgroundColor = .bgMid
         }
     }
 }

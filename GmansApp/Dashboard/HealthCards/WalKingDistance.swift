@@ -12,6 +12,7 @@ struct WalKingDistance: View {
     @State private var isWalking = false
     @State private var timer: Timer? = nil
     @State private var displayCalender: Bool = false
+    @State private var selectedDates: Set<DateComponents> = []
     
     var body: some View {
         ZStack {
@@ -25,7 +26,9 @@ struct WalKingDistance: View {
                         .padding(.leading, -180)
                     GmanHeading(heading:"Walking Distance")
                 }
-                Spacer()
+                if selectedDates.count > 0 {
+                    Text("Selected Dates : \(formattedDates)")
+                }
                 GmanLineChart(chartData: MockData.barChartData)
                 Spacer()
                 Button(action: {
@@ -35,7 +38,7 @@ struct WalKingDistance: View {
                 }
                 .padding()
                 if displayCalender {
-                    GmansCalender(hideCalender: $displayCalender)
+                    GmansCalender(selectedDates: $selectedDates, hideCalender: $displayCalender)
                 }
             }
             .padding(.bottom, 30)
@@ -50,6 +53,26 @@ struct WalKingDistance: View {
             self.timer = nil
         }
     }
+    
+    private var formattedDates: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        let sortedDates = selectedDates.sorted { date1, date2 in
+            guard let date1 = Calendar.current.date(from: date1),
+                  let date2 = Calendar.current.date(from: date2) else {
+                return false
+            }
+            return date1 < date2
+        }
+        
+        return sortedDates
+            .compactMap { Calendar.current.date(from: $0) }
+            .map { formatter.string(from: $0) }
+            .joined(separator: ", ")
+    }
+    
 }
 
 #Preview {

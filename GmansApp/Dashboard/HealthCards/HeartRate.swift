@@ -12,6 +12,7 @@ struct HeartRate: View {
     
     @State private var animationAmount: CGFloat = 1
     @State private var displayCalender: Bool = false
+    @State private var selectedDates: Set<DateComponents> = []
     
     var heartRateData: [HKQuantitySample] = []
     
@@ -31,6 +32,9 @@ struct HeartRate: View {
                         .padding(.leading, -130)
                     GmanHeading(heading:"Heart Rate")
                 }
+                if selectedDates.count > 0 {
+                    Text("Selected Dates : \(formattedDates)")
+                }
                 GmansPiChart(chartData: MockData.pieChartData)
                 Spacer()
                 Button(action: {
@@ -40,7 +44,7 @@ struct HeartRate: View {
                 }
                 .padding()
                 if displayCalender {
-                    GmansCalender(hideCalender: $displayCalender)
+                    GmansCalender(selectedDates: $selectedDates, hideCalender: $displayCalender)
                 }
             }
             .padding(.bottom, 30)
@@ -48,6 +52,25 @@ struct HeartRate: View {
         .onAppear() {
             animationAmount = 1.2
         }
+    }
+    
+    private var formattedDates: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        let sortedDates = selectedDates.sorted { date1, date2 in
+            guard let date1 = Calendar.current.date(from: date1),
+                  let date2 = Calendar.current.date(from: date2) else {
+                return false
+            }
+            return date1 < date2
+        }
+        
+        return sortedDates
+            .compactMap { Calendar.current.date(from: $0) }
+            .map { formatter.string(from: $0) }
+            .joined(separator: ", ")
     }
     
 }

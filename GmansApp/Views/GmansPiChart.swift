@@ -8,15 +8,10 @@
 import SwiftUI
 import Charts
 
-struct PiChartDataPoint {
-    let date: Date
-    let rate: Double
-    var animate: Bool
-}
-
 struct GmansPiChart: View {
     
-    @State var chartData: [PiChartDataPoint]
+    @State var chartData: [ChartDataPoint]
+    @StateObject var viewModel = ChartsViewModel()
     
     var body: some View {
         ZStack {
@@ -27,8 +22,13 @@ struct GmansPiChart: View {
                     angularInset: 1.5
                 )
                 .foregroundStyle(.chartFill)
+                .foregroundStyle(by: .value("Name", dataItem.date))
                 .opacity(dataItem.rate > 50 ? 1 : 0.4)
                 .cornerRadius(10)
+                .annotation(position: .overlay) {
+                    Text("\(viewModel.formattedDate(date: dataItem.date))")
+                        .foregroundColor(.white)
+                }
             }
             .padding()
         }

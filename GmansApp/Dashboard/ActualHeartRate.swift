@@ -12,13 +12,20 @@ struct ActualHeartRate: View {
     
     @StateObject var healthKitManager = HealthKitManager()
     @State private var heartRateData: [HKQuantitySample] = []
+    @Binding var isLogOut: Bool
     
     var body: some View {
         ZStack {
             GmansBGView()
             VStack {
-                GmanHeading(heading: "Health Data")
-                    .padding()
+                HStack {
+                    Text("")
+                    Spacer()
+                    GmanHeading(heading: "Health Data")
+                        .padding()
+                    Spacer()
+                    GmanLogOutBtn(isLogOut: $isLogOut)
+                }
                 Spacer()
                 if healthKitManager.isHeartRateAuthorized {
                     List(heartRateData, id: \.uuid) { sample in
@@ -48,5 +55,5 @@ struct ActualHeartRate: View {
 }
 
 #Preview {
-    ActualHeartRate()
+    ActualHeartRate(isLogOut: .constant(true))
 }

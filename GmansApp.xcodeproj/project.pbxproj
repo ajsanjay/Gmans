@@ -33,6 +33,9 @@
 		8DF2A64B2BE8CDEB007032ED /* GmansPiChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A64A2BE8CDEB007032ED /* GmansPiChart.swift */; };
 		8DF2A64D2BE9C3DB007032ED /* GmanLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A64C2BE9C3DB007032ED /* GmanLineChart.swift */; };
 		8DF2A64F2BE9C99F007032ED /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A64E2BE9C99F007032ED /* HeartView.swift */; };
+		8DF2A6B32BEDD507007032ED /* HealthCardsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6B22BEDD507007032ED /* HealthCardsVM.swift */; };
+		8DF2A6B52BEDF51A007032ED /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6B42BEDF51A007032ED /* ChartsViewModel.swift */; };
+		8DF2A6B92BEDF936007032ED /* GmanLogOutBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6B82BEDF936007032ED /* GmanLogOutBtn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		8DF2A64A2BE8CDEB007032ED /* GmansPiChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmansPiChart.swift; sourceTree = "<group>"; };
 		8DF2A64C2BE9C3DB007032ED /* GmanLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanLineChart.swift; sourceTree = "<group>"; };
 		8DF2A64E2BE9C99F007032ED /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		8DF2A6B22BEDD507007032ED /* HealthCardsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCardsVM.swift; sourceTree = "<group>"; };
+		8DF2A6B42BEDF51A007032ED /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
+		8DF2A6B82BEDF936007032ED /* GmanLogOutBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanLogOutBtn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 				8DF2A6462BE8C14B007032ED /* GmansBarChart.swift */,
 				8DF2A64A2BE8CDEB007032ED /* GmansPiChart.swift */,
 				8DF2A64C2BE9C3DB007032ED /* GmanLineChart.swift */,
+				8DF2A6B42BEDF51A007032ED /* ChartsViewModel.swift */,
 				8DF2A64E2BE9C99F007032ED /* HeartView.swift */,
 			);
 			path = Views;
@@ -149,6 +156,7 @@
 				8DF2A6082BE61B87007032ED /* GmanDp.swift */,
 				8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */,
 				8DF2A62A2BE67FDC007032ED /* GmanSubTitl.swift */,
+				8DF2A6B82BEDF936007032ED /* GmanLogOutBtn.swift */,
 			);
 			path = UIStyles;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 				8DF2A63D2BE77CC9007032ED /* HeartRate.swift */,
 				8DF2A63F2BE77CE5007032ED /* WalKingDistance.swift */,
 				8DF2A6412BE77CF1007032ED /* StepsCovered.swift */,
+				8DF2A6B22BEDD507007032ED /* HealthCardsVM.swift */,
 			);
 			path = HealthCards;
 			sourceTree = "<group>";
@@ -256,6 +265,7 @@
 				8D2787B32BE602B600F4EFE9 /* GmansBGView.swift in Sources */,
 				8DF2A64F2BE9C99F007032ED /* HeartView.swift in Sources */,
 				8D2787B62BE6035900F4EFE9 /* GmanHeading.swift in Sources */,
+				8DF2A6B32BEDD507007032ED /* HealthCardsVM.swift in Sources */,
 				8D27879D2BE5435200F4EFE9 /* GmansAppApp.swift in Sources */,
 				8D2787AE2BE543A100F4EFE9 /* GmansSplashBG.swift in Sources */,
 				8D2787B82BE6047E00F4EFE9 /* GmanButton.swift in Sources */,
@@ -267,8 +277,10 @@
 				8DF2A64D2BE9C3DB007032ED /* GmanLineChart.swift in Sources */,
 				8DF2A6452BE8ADCA007032ED /* GmansCalender.swift in Sources */,
 				8DF2A6092BE61B87007032ED /* GmanDp.swift in Sources */,
+				8DF2A6B92BEDF936007032ED /* GmanLogOutBtn.swift in Sources */,
 				8DF2A6172BE63064007032ED /* LoginViewModel.swift in Sources */,
 				8DF2A62D2BE68066007032ED /* HardCodeHeathData.swift in Sources */,
+				8DF2A6B52BEDF51A007032ED /* ChartsViewModel.swift in Sources */,
 				8DF2A64B2BE8CDEB007032ED /* GmansPiChart.swift in Sources */,
 				8DF2A6302BE6815C007032ED /* MockData.swift in Sources */,
 				8DF2A6472BE8C14B007032ED /* GmansBarChart.swift in Sources */,

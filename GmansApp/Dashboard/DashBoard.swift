@@ -22,7 +22,7 @@ struct DashBoard: View {
         ZStack {
             TabView(selection: $selection) {
                 ZStack {
-                    ActualHeartRate()
+                    ActualHeartRate(isLogOut: $isDisplayingDetail)
                 }
                 .tabItem {
                     Image(systemName: "lock.laptopcomputer")
@@ -33,7 +33,7 @@ struct DashBoard: View {
                 }
                 .tag(0)
                 ZStack {
-                    HardCodeHeathData()
+                    HardCodeHeathData(isLogOut: $isDisplayingDetail)
                 }
                 .tabItem {
                     Image(systemName: "lock.open.laptopcomputer")

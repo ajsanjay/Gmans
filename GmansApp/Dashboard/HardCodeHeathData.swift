@@ -12,8 +12,8 @@ struct HardCodeHeathData: View {
     
     @StateObject var healthKitManager = HealthKitManager()
     @State private var heartRateData: [HKQuantitySample] = []
-    
     @State private var currentIndex = 0
+    @Binding var isLogOut: Bool
         
     var body: some View {
         ZStack {
@@ -21,11 +21,11 @@ struct HardCodeHeathData: View {
             VStack {
                 if healthKitManager.isHeartRateAuthorized {
                     TabView(selection: $currentIndex) {
-                        HeartRate(heartRateData: heartRateData)
+                        HeartRate(isLogOut: $isLogOut, heartRateData: heartRateData)
                             .tag(0)
-                        WalKingDistance()
+                        WalKingDistance(isLogOut: $isLogOut)
                             .tag(1)
-                        StepsCovered()
+                        StepsCovered(isLogOut: $isLogOut)
                             .tag(2)
                     }
                     .tabViewStyle(.page)
@@ -57,5 +57,5 @@ struct HardCodeHeathData: View {
 }
 
 #Preview {
-    HardCodeHeathData()
+    HardCodeHeathData(isLogOut: .constant(true))
 }

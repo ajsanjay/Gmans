@@ -16,6 +16,7 @@ struct GmanSubTitl: View {
             .font(.subheadline)
             .fontWeight(.medium)
             .foregroundColor(.heading)
+            .padding()
     }
 }
 

@@ -8,32 +8,20 @@
 import SwiftUI
 import Charts
 
-struct BarChartDataPoint {
-    let date: Date
-    let rate: Double
-    var animate: Bool
-}
-
 struct GmansBarChart: View {
     
-    @State private var showAverage: Bool = false
-    @State var chartData: [BarChartDataPoint]
-    
-    func formattedDate(date: Date) -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MM/dd"
-        return formatter.string(from: date)
-    }
+    @StateObject var viewModel = ChartsViewModel()
+    @State var chartData: [ChartDataPoint]
 
     var body: some View {
         Chart {
             ForEach(0..<chartData.count, id: \.self) { index in
-                BarMark(x: .value("Type", "\(formattedDate(date: chartData[index].date))"), y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
+                BarMark(x: .value("Type", "\(viewModel.formattedDate(date: chartData[index].date))"), y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
                     .foregroundStyle(.chartFill)
                     .opacity(chartData[index].rate > 60 ? 1 : 0.5)
                     .cornerRadius(15)
                 
-                if showAverage {
+                if viewModel.showAverage {
                     RuleMark(y: .value("Average", 50))
                         .foregroundStyle(.chartFill)
                         .annotation(position: .top, alignment: .bottomLeading) {
@@ -46,8 +34,8 @@ struct GmansBarChart: View {
         .padding()
         .chartYScale(domain: 0...100)
         .aspectRatio(1, contentMode: .fit)
-        Toggle(isOn: $showAverage) {
-            Text(showAverage ? "Show Average" : "Hide Average")
+        Toggle(isOn: $viewModel.showAverage) {
+            Text(viewModel.showAverage ? "Show Average" : "Hide Average")
         }
         .foregroundColor(.white)
         .tint(.chartFill)

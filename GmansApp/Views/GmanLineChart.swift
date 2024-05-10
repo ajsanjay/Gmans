@@ -10,25 +10,25 @@ import Charts
 
 struct GmanLineChart: View {
     
-    @State var chartData: [BarChartDataPoint]
-    @State private var showAverage: Bool = false
+    @StateObject var viewModel = ChartsViewModel()
+    @State var chartData: [ChartDataPoint]
     
     var body: some View {
         Chart {
             ForEach(0..<chartData.count, id: \.self) { index in
                 LineMark(
-                    x: .value("Type", "\(chartData[index].date)"),
+                    x: .value("Type", "\(viewModel.formattedDate(date: chartData[index].date))"),
                     y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
                 .foregroundStyle(.chartLine)
                 .foregroundStyle(.chartFill.gradient)
                     .interpolationMethod(.catmullRom)
                 AreaMark(
-                    x: .value("Type", "\(chartData[index].date)"),
+                    x: .value("Type", "\(viewModel.formattedDate(date: chartData[index].date))"),
                     y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
                 .foregroundStyle(.chartFill.opacity(0.1).gradient)
                     .interpolationMethod(.catmullRom)
                 
-                if showAverage {
+                if viewModel.showAverage {
                     RuleMark(y: .value("Average", 50))
                         .foregroundStyle(.chartFill)
                         .annotation(position: .top, alignment: .bottomLeading) {
@@ -41,8 +41,8 @@ struct GmanLineChart: View {
         .padding()
         .chartYScale(domain: 0...100)
         .aspectRatio(1, contentMode: .fit)
-        Toggle(isOn: $showAverage) {
-            Text(showAverage ? "Show Average" : "Hide Average")
+        Toggle(isOn: $viewModel.showAverage) {
+            Text(viewModel.showAverage ? "Show Average" : "Hide Average")
         }
         .foregroundColor(.white)
         .tint(.chartFill)

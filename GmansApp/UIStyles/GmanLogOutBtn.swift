@@ -5,6 +5,11 @@
 //  Created by Jaya Sabeen on 10/05/24.
 //
 
+// MARK: - Log out button
+/*
+ This file is used to Display the log out bar button item
+*/
+
 import SwiftUI
 
 struct GmanLogOutBtn: View {

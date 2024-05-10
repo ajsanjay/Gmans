@@ -5,6 +5,13 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+
+// MARK: - Healthkit Data
+/*
+This file is used to grab the actual health data the functions to grab heart rate, walking distance and steps covered is added here
+ - Once we have the health devices enabled based on logs can display the data as needed
+*/
+
 import Foundation
 import HealthKit
 

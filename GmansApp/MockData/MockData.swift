@@ -5,6 +5,12 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+
+// MARK: - MockData
+/*
+ This file consists the sample data which is used in entire app
+ */
+
 import Foundation
 
 struct MockData {

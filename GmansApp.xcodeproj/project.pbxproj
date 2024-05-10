@@ -36,6 +36,7 @@
 		8DF2A6B32BEDD507007032ED /* HealthCardsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6B22BEDD507007032ED /* HealthCardsVM.swift */; };
 		8DF2A6B52BEDF51A007032ED /* ChartsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6B42BEDF51A007032ED /* ChartsViewModel.swift */; };
 		8DF2A6B92BEDF936007032ED /* GmanLogOutBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6B82BEDF936007032ED /* GmanLogOutBtn.swift */; };
+		8DF2A6BB2BEE1638007032ED /* GmanAnimateImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF2A6BA2BEE1638007032ED /* GmanAnimateImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		8DF2A6B22BEDD507007032ED /* HealthCardsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCardsVM.swift; sourceTree = "<group>"; };
 		8DF2A6B42BEDF51A007032ED /* ChartsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewModel.swift; sourceTree = "<group>"; };
 		8DF2A6B82BEDF936007032ED /* GmanLogOutBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanLogOutBtn.swift; sourceTree = "<group>"; };
+		8DF2A6BA2BEE1638007032ED /* GmanAnimateImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GmanAnimateImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				8DF2A61A2BE6315A007032ED /* GmansNavButton.swift */,
 				8DF2A62A2BE67FDC007032ED /* GmanSubTitl.swift */,
 				8DF2A6B82BEDF936007032ED /* GmanLogOutBtn.swift */,
+				8DF2A6BA2BEE1638007032ED /* GmanAnimateImage.swift */,
 			);
 			path = UIStyles;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				8DF2A64B2BE8CDEB007032ED /* GmansPiChart.swift in Sources */,
 				8DF2A6302BE6815C007032ED /* MockData.swift in Sources */,
 				8DF2A6472BE8C14B007032ED /* GmansBarChart.swift in Sources */,
+				8DF2A6BB2BEE1638007032ED /* GmanAnimateImage.swift in Sources */,
 				8DF2A6402BE77CE5007032ED /* WalKingDistance.swift in Sources */,
 				8DF2A6272BE67BCF007032ED /* ActualHeartRate.swift in Sources */,
 				8DF2A63E2BE77CC9007032ED /* HeartRate.swift in Sources */,

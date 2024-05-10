@@ -5,15 +5,18 @@
 //  Created by Jaya Sabeen on 10/05/24.
 //
 
+// MARK: - HealthCardsVM
+/*
+This View model is used to handle the logics displayed on Tabs Heart rate, Walking Distance and Steps Covered
+*/
+
 import Foundation
 
 final class HealthCardsVM: ObservableObject {
     
     @Published var selectedDates: Set<DateComponents> = []
-    @Published var animationAmount: CGFloat = 1
     @Published var displayCalender: Bool = false
     @Published var isWalking = false
-    @Published var timer: Timer? = nil
     
     var formattedDates: String {
         let formatter = DateFormatter()

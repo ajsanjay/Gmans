@@ -5,6 +5,11 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+// MARK: - Background
+/*
+ This file is the background for entire app
+*/
+
 import SwiftUI
 
 struct GmansBGView: View {

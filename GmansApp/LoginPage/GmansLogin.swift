@@ -5,6 +5,14 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+// MARK: - Login Screen
+/*
+ AuthenticationServices is used to display sign In with apple
+ - This have the API to handle sighn in with Apple
+ - Using sign in with other social id we can grab user email, address, avatar which can easily grab basic information of a user to do a sighn up internally
+ - But sighn in with apple we can grab only name and email. need to add additional logics to handle session
+*/
+
 import SwiftUI
 import AuthenticationServices
 

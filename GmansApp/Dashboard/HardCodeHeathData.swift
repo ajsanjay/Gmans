@@ -5,6 +5,13 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+// MARK: - Hard Code Healthkit Data
+/*
+This file will be displayed on Hardcode data on Tabbar
+ - Here if authorized to access the health data heartRateData this will add dummy data
+ - The Tab view will display Heart rate, Walking Distance and Steps covered
+*/
+
 import SwiftUI
 import HealthKit
 

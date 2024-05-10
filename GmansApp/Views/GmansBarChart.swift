@@ -5,6 +5,12 @@
 //  Created by Jaya Sabeen on 06/05/24.
 //
 
+// MARK: - Bar chart
+/*
+ This file contains bar chart functionality
+ - iOS 17 introduced new Chart Api's Which is used here
+*/
+
 import SwiftUI
 import Charts
 

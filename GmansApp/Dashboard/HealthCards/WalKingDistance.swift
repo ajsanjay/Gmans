@@ -5,6 +5,11 @@
 //  Created by Jaya Sabeen on 05/05/24.
 //
 
+// MARK: - Hard Code Walking Distance Data
+/*
+This file will be displayed on Hardcode Walking Distance on Tab view
+*/
+
 import SwiftUI
 
 struct WalKingDistance: View {
@@ -16,12 +21,7 @@ struct WalKingDistance: View {
         ZStack {
             VStack {
                 HStack {
-                    Image(systemName: viewModel.isWalking ? "figure.walk.motion" : "figure.walk")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(.red)
-                        .padding()
+                    GmanAnimateImage(firstImage: "figure.walk.motion", secondImage: "figure.walk")
                     Spacer()
                     GmanHeading(heading:"Walking Distance")
                     Spacer()
@@ -43,15 +43,6 @@ struct WalKingDistance: View {
                 }
             }
             .padding(.bottom, 30)
-        }
-        .onAppear {
-            viewModel.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                viewModel.isWalking.toggle()
-            }
-        }
-        .onDisappear {
-            viewModel.timer?.invalidate()
-            viewModel.timer = nil
         }
     }
     

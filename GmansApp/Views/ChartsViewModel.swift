@@ -5,6 +5,12 @@
 //  Created by Jaya Sabeen on 10/05/24.
 //
 
+// MARK: - Chart View Model
+/*
+ - This file contains the dateformatter logic to be displayed on the pages where ChartsViewModel is used
+ - ChartsViewModel is used in GmansBarChart, GmansPiChart, GmanLineChart
+*/
+
 import Foundation
 
 struct ChartDataPoint {

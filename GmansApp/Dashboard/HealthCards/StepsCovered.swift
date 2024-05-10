@@ -5,6 +5,11 @@
 //  Created by Jaya Sabeen on 05/05/24.
 //
 
+// MARK: - Hard Code Steps Covered Data
+/*
+This file will be displayed on Hardcode Steps covered on Tab view
+*/
+
 import SwiftUI
 
 struct StepsCovered: View {
@@ -16,12 +21,7 @@ struct StepsCovered: View {
         ZStack {
             VStack {
                 HStack {
-                    Image(systemName: viewModel.isWalking ? "figure.arms.open" : "figure.stand")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(.red)
-                        .padding()
+                    GmanAnimateImage(firstImage: "figure.arms.open", secondImage: "figure.stand")
                     Spacer()
                     GmanHeading(heading:"Steps Covered")
                     Spacer()
@@ -43,15 +43,6 @@ struct StepsCovered: View {
                 }
             }
             .padding(.bottom, 30)
-        }
-        .onAppear {
-            viewModel.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-                viewModel.isWalking.toggle()
-            }
-        }
-        .onDisappear {
-            viewModel.timer?.invalidate()
-            viewModel.timer = nil
         }
     }
     

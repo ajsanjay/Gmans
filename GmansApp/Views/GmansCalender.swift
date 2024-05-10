@@ -5,6 +5,13 @@
 //  Created by Jaya Sabeen on 06/05/24.
 //
 
+// MARK: - Calender
+/*
+ This file is the calender picker for entire app
+ - Here I have tried a different calender on my own but that was not fitting to the UI so planned to moved to default Date picker
+ - If Commenting the default date picker and un comment the commented lines will enable the custom calender picker
+*/
+
 import SwiftUI
 
 struct GmansCalender: View {

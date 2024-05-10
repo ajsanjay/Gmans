@@ -5,6 +5,12 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+// MARK: - Dashboard
+/*
+ A tabbar is used to toggle between the Actual data and Hardcode Data
+ - The actual data functionality will display the hert rate once authorized to access health data
+*/
+
 import SwiftUI
 
 struct DashBoard: View {

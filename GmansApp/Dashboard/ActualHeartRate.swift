@@ -5,6 +5,13 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+// MARK: - Actual Healthkit Data
+/*
+This file will be displayed on Actual data Tabbar
+ - Here if authorized to access the health data heartRateData on appear using HealthKitManager() grabbing the actal data Line number 36,37 42,43
+ - Similerly other data can be grabbed
+*/
+
 import SwiftUI
 import HealthKit
 

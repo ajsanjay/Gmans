@@ -5,6 +5,11 @@
 //  Created by Jaya Sabeen on 05/05/24.
 //
 
+// MARK: - Hard Code Heart rate Data
+/*
+This file will be displayed on Hardcode Heart data on Tab view
+*/
+
 import SwiftUI
 import HealthKit
 
@@ -21,13 +26,6 @@ struct HeartRate: View {
                 HStack {
                     HeartView()
                         .frame(width: 40, height: 40)
-                        .scaleEffect(viewModel.animationAmount)
-                        .animation(
-                            .spring(response: 0.2, dampingFraction: 0.3, blendDuration: 0.8)
-                            .delay(0.2)
-                            .repeatForever(autoreverses: true),
-                            value: viewModel.animationAmount
-                        )
                         .padding()
                     Spacer()
                     GmanHeading(heading:"Heart Rate")
@@ -50,9 +48,6 @@ struct HeartRate: View {
                 }
             }
             .padding(.bottom, 30)
-        }
-        .onAppear() {
-            viewModel.animationAmount = 1.2
         }
     }
     

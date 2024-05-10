@@ -5,6 +5,11 @@
 //  Created by Jaya Sabeen on 04/05/24.
 //
 
+// MARK: - Subtitle text
+/*
+ This file is used to Display the text content with the following configuration
+*/
+
 import SwiftUI
 
 struct GmanSubTitl: View {

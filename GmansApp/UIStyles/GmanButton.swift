@@ -20,9 +20,9 @@ struct GmanButton: View {
         Text(buttonTitle)
             .font(.title2)
             .fontWeight(.medium)
-            .foregroundColor(.buttonTitle)
+            .foregroundColor(Color("buttonTitle"))
             .frame(width: 290, height: 60)
-            .background(.buttonBg.gradient)
+            .background(Color("buttonBg").gradient)
             .cornerRadius(30)
     }
     

@@ -20,7 +20,7 @@ struct GmanDp: View {
         Image(systemName: systemName)
             .resizable()
             .frame(width: 150, height: 150)
-            .foregroundColor(.heading)
+            .foregroundColor(Color("heading"))
     }
     
 }

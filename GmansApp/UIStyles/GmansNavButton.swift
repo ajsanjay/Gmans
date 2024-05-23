@@ -20,7 +20,7 @@ struct GmansNavButton: View {
         Image(systemName: titleName)
             .resizable()
             .frame(width: 40, height: 30)
-            .foregroundColor(.heading)
+            .foregroundColor(Color("heading"))
             .padding()
     }
     

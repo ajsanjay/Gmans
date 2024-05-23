@@ -20,7 +20,7 @@ struct GmanHeading: View {
         Text(heading)
             .font(.largeTitle)
             .fontWeight(.medium)
-            .foregroundColor(.heading)
+            .foregroundColor(Color("heading"))
     }
 }
 

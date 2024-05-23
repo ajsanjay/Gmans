@@ -25,18 +25,18 @@ struct GmanLineChart: View {
                 LineMark(
                     x: .value("Type", "\(viewModel.formattedDate(date: chartData[index].date))"),
                     y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
-                .foregroundStyle(.chartLine)
-                .foregroundStyle(.chartFill.gradient)
+                .foregroundStyle(Color("ChartLine"))
+                .foregroundStyle(Color("ChartFill").gradient)
                     .interpolationMethod(.catmullRom)
                 AreaMark(
                     x: .value("Type", "\(viewModel.formattedDate(date: chartData[index].date))"),
                     y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
-                .foregroundStyle(.chartFill.opacity(0.1).gradient)
+                .foregroundStyle(Color("ChartFill").opacity(0.1).gradient)
                     .interpolationMethod(.catmullRom)
                 
                 if viewModel.showAverage {
                     RuleMark(y: .value("Average", 50))
-                        .foregroundStyle(.chartFill)
+                        .foregroundStyle(Color("ChartFill"))
                         .annotation(position: .top, alignment: .bottomLeading) {
                             Text("Average 50")
                                 .foregroundColor(.white)
@@ -51,7 +51,7 @@ struct GmanLineChart: View {
             Text(viewModel.showAverage ? "Show Average" : "Hide Average")
         }
         .foregroundColor(.white)
-        .tint(.chartFill)
+        .tint(Color("ChartFill"))
         .padding()
         .onAppear() {
             for (index, _) in chartData.enumerated() {

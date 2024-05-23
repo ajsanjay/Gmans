@@ -23,13 +23,13 @@ struct GmansBarChart: View {
         Chart {
             ForEach(0..<chartData.count, id: \.self) { index in
                 BarMark(x: .value("Type", "\(viewModel.formattedDate(date: chartData[index].date))"), y: .value("Average", chartData[index].animate ? chartData[index].rate : 0))
-                    .foregroundStyle(.chartFill)
+                    .foregroundStyle(Color("ChartFill"))
                     .opacity(chartData[index].rate > 60 ? 1 : 0.5)
                     .cornerRadius(15)
                 
                 if viewModel.showAverage {
                     RuleMark(y: .value("Average", 50))
-                        .foregroundStyle(.chartFill)
+                        .foregroundStyle(Color("ChartFill"))
                         .annotation(position: .top, alignment: .bottomLeading) {
                             Text("Average 50")
                                 .foregroundColor(.white)
@@ -44,7 +44,7 @@ struct GmansBarChart: View {
             Text(viewModel.showAverage ? "Show Average" : "Hide Average")
         }
         .foregroundColor(.white)
-        .tint(.chartFill)
+        .tint(Color("ChartFill"))
         .padding()
         .onAppear() {
             for (index, _) in chartData.enumerated() {

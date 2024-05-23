@@ -20,7 +20,7 @@ struct GmanSubTitl: View {
         Text(subTitl)
             .font(.subheadline)
             .fontWeight(.medium)
-            .foregroundColor(.heading)
+            .foregroundColor(Color("heading"))
             .padding()
     }
 }

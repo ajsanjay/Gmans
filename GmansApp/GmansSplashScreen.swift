@@ -51,7 +51,7 @@ struct ProgressBar: View {
                 
                 Rectangle()
                     .frame(width: min(self.progressValue * geometry.size.width, geometry.size.width), height: 10)
-                    .foregroundColor(.chartFill)
+                    .foregroundColor(Color("ChartFill"))
                     .cornerRadius(5)
                     .onAppear {
                         animateProgressBar()
@@ -115,7 +115,7 @@ struct ECGGraphView: View {
                     }
                 }
                 .trim(from: 0, to: trimEnd)
-                .stroke(.chartLine, lineWidth: 2)
+                .stroke(Color("ChartLine"), lineWidth: 2)
             }
             .onAppear {
                 startAnimating()
